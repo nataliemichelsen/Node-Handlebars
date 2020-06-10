@@ -2,13 +2,13 @@
 USE db_burger;
 
 -- // insert into statements
-INSERT INTO department ( department_name )
+INSERT INTO department (  )
 VALUES ("");
 
 
-INSERT INTO role ( title, salary, department_id )
+INSERT INTO role (  )
 VALUES (""), (""), ("");
 
 
-INSERT INTO employee ( first_name, last_name, role_id, manager_id )
+INSERT INTO employee (  )
 VALUES (""), (""), (""), ("");

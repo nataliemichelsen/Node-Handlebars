@@ -1,9 +1,9 @@
 -- // remove if existing
-DROP DATABASE IF EXISTS db_burger;
+DROP DATABASE IF EXISTS burger_db;
 
 -- // create & use database 
-CREATE DATABASE db_burger;
-USE db_burger;
+CREATE DATABASE burger_db;
+USE burger_db;
 
 -- // define tables 
 CREATE TABLE  (
@@ -20,6 +20,6 @@ CREATE TABLE role (
 
 CREATE TABLE employee (
     id INT auto_increment NOT NULL,
-    
+
     PRIMARY KEY (id)
 );
