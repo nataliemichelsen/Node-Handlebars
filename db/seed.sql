@@ -2,13 +2,9 @@
 USE db_burger;
 
 -- // insert into statements
-INSERT INTO department (  )
-VALUES ("");
-
-
-INSERT INTO role (  )
-VALUES (""), (""), ("");
-
-
-INSERT INTO employee (  )
-VALUES (""), (""), (""), ("");
+INSERT INTO burgers (burger_name, devoured) VALUES 
+("Fancy Lettuce Wrap", TRUE), 
+("Tuna on Toast", FALSE), 
+("Inside-Out Animal-Style", TRUE),
+("Burnt AF Grilled Cheese", FALSE),
+("Spaghetti", FALSE);

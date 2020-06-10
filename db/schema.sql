@@ -5,21 +5,10 @@ DROP DATABASE IF EXISTS burger_db;
 CREATE DATABASE burger_db;
 USE burger_db;
 
--- // define tables 
-CREATE TABLE  (
-    id INT auto_increment NOT NULL,
-
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE role (
-    id INT auto_increment NOT NULL,
-
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE employee (
-    id INT auto_increment NOT NULL,
-
-    PRIMARY KEY (id)
+-- // define table
+CREATE TABLE burgers (
+  id INT NOT NULL AUTO_INCREMENT,
+  burger_name VARCHAR(40) NOT NULL,
+  devoured BOOLEAN DEFAULT FALSE NOT NULL, 
+  PRIMARY KEY (id)
 );
