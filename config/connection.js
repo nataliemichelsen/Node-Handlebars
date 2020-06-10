@@ -1,22 +1,27 @@
 // connection.mysql connect
 const mysql = require("mysql");
-const util = require("util");
 
 // create connection with root info
-var connection = mysql.createConnection({
+// use process.env instead of "regular" way bc we are using a local port
+var connection;
+
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
     host: "localhost",
     port: 3306,
-    user: "",
+    user: "root",
     password: "1234",
-    database: "CMS"
-  });
+    database: "burgers_db"
+}
 
 // connect to the mysql server and sql database
-connection.connect(function(err) {
-    if (err) throw err;
-    // run the start function after the connection is made to prompt the user
-    console.log()
+// arrow function used for better functionality
+connection.connect((err) => {
+    if (err) {
+        return
+    }
   });
 
-  connection.query = util.promisify(connection.query)
+// setting module.exports connection
   module.exports = connection;
