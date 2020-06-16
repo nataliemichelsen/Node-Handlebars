@@ -3,6 +3,7 @@ const connection = require("../config/connection");
 
 // set orm variable to convert data between languages
 // set parameters for all options (select, insert, update, delete)
+// same functions as defined on script.js >> export to script.js
 const orm = {
     
     // select
@@ -25,7 +26,7 @@ const orm = {
 
     // update
     updateOne: (input, config) => {
-        const queryString = `UPDATE burgers SET devoured = true WHERE id = ?;`;
+        const queryString = `UPDATE burgers SET eaten = true WHERE id = ?;`;
         connection.query(queryString, input, (err, result) => {
             if (err) throw err;
             config(result);
@@ -42,5 +43,5 @@ const orm = {
     }
 };
 
-// setting module.exports for orm
+// exporting orm variable as defined above
 module.exports = orm;

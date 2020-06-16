@@ -3,8 +3,8 @@ USE db_burger;
 
 -- // insert into statements
 INSERT INTO burgers (burger_name, devoured) VALUES 
-("Fancy Lettuce Wrap", TRUE), 
+("Fancy Lettuce Wrap", FALSE), 
 ("Tuna on Toast", FALSE), 
-("Inside-Out Animal-Style", TRUE),
+("Inside-Out Animal-Style", FALSE),
 ("Burnt AF Grilled Cheese", FALSE),
-("Spaghetti", FALSE);
+("Spaghetti", TRUE);
