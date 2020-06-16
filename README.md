@@ -1,5 +1,23 @@
 # Node-Handlebars
 
+## **Table of Contents**
+
+* Project Decription
+* Project Objective
+* Requirements for Assignment
+* Instructions for Assignment
+* Assignment Objective
+* Usage
+* Licence
+* Contributors
+* Installation
+* Tests
+* Video of Deployed Application
+
+## **Description**
+
+This is a fun burger-eating game where any user can pick from a list of burger options and then "eat" them. 
+
 ## **Objective**
 
 * Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
@@ -10,11 +28,11 @@
 
 * Your app will store every burger in a database, whether devoured or not.
 
-## **Requirements**
+## **Assignment Requirements**
 
 Attempt to complete homework assignment as described in instructions. If unable to complete certain portions, please pseudocode these portions to describe what remains to be completed. Hosting on Heroku and adding a README.md are required for this homework. In addition, add this homework to your portfolio, more information can be found below.
 
-## Instructions
+## **Assignment Instructions**
 
 #### App Setup
 
@@ -164,5 +182,25 @@ All the recommended files and directories from the steps above should look like 
     └── layouts
         └── main.handlebars
 ```
+
+## **Usage**
+
+This application is somewhat useful, but is mostly a fun game or activity. 
+
+## **Licence**
+
+There is currently no licence for this app. 
+
+## **Contributors**
+
+This was a solo project for a UofU Coding Bootcamp, so credit must also be noted for my instructor and TA's, as well as the author of our class cirriculum and our SSM. 
+
+## **Installation**
+
+Send me a message on GitHub, otherwise, feel free to clone or download.
+
+## **Tests**
+
+There are currently no tests for this app. 
 
 ## **Video of Deployed Application**
