@@ -5,7 +5,8 @@
 $(() => {
     // event listener for submit button (not click listener)
     $("").submit((event) => {
-        name:
+        // submit button input
+        name: $()
     });
     // ajax call
     $.ajax("/api", {
@@ -22,7 +23,8 @@ $(() => {
 $(() => {
     // on-click event listener
     $("").on("click", (event) => {
-        id:
+        // targeting item data
+        id: $()
     });
     // ajax call
     $.ajax("/api", {
@@ -38,7 +40,8 @@ $(() => {
 $(() => {
     // on-click event listener
     $("").on("click", (event) => {
-        id:
+        // targeting item data
+        id: $()
     });
     // ajax call
     $.ajax("/api", {
