@@ -2,25 +2,32 @@
 
 
 // post
+$(() => {
     name:
     type:
     data:
+    
+    // page reload 
+    location.reload();
+});
 
-// page reload 
-location.reload();
 
 // put
+$(() => {
     name:
     type:
     data:
-
-// page reload 
-location.reload();
+    
+    // page reload 
+    location.reload();
+});
 
 // delete 
+$(() => {
     name:
     type:
     data:
-
-// page reload 
-location.reload();
+    
+    // page reload 
+    location.reload();
+});
