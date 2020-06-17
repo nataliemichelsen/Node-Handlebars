@@ -5,12 +5,14 @@
 $(() => {
     // event listener for submit button (not click listener)
     $("").submit((event) => {
-
-    });
     name:
+    });
+    // ajax call
+    $.ajax
+
     type: "POST"
     data: body
-    
+
     // page reload 
     location.reload();
 });
@@ -20,12 +22,13 @@ $(() => {
 $(() => {
     // on-click event listener
     $("").on("click", (event) => {
-
-    });
     id:
+    });
+    // ajax call
+    $.ajax
     type: "PUT"
     data: body
-    
+
     // page reload 
     location.reload();
 });
@@ -34,12 +37,13 @@ $(() => {
 $(() => {
     // on-click event listener
     $("").on("click", (event) => {
-
-    });
     id:
+    });
+    // ajax call
+    $.ajax
     type: "DELETE"
     data: body
-    
+
     // page reload 
     location.reload();
 });
