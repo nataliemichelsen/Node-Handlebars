@@ -10,7 +10,7 @@ const burger = require("../models/app")
 // no body, just data
 // no need to define error status or reference api
 router.get("/", (req, res) => {
-    burger.all(data => res.render("index", {burgers: data}));
+    burger.all(data => res.render("index", { burgers: data }));
 });
 
 // put (update)
@@ -24,7 +24,7 @@ router.put("/api/", (req, res) => {
 // using body.name for 
 // no need to define error status
 router.post("/api/", (req, res) => {
-    burger.add(req.body.name, result => res.json({id: result.insertId}));
+    burger.add(req.body.name, result => res.json({ id: result.insertId }));
 });
 
 // delete

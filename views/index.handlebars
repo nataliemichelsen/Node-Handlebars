@@ -21,7 +21,7 @@
                 {{!-- list of burgers that can be eaten --}}
                 {{#each burgers}}
                 {{#unless eaten}}
-                {{> burger-list devoured=false}}
+                {{> burger-list eaten=false}}
                 {{/unless}}
                 {{/each}}
             </div>
@@ -32,7 +32,7 @@
                 {{!-- list of burgers that have been eaten --}}
                 {{#each burgers}}
                 {{#if eaten}}
-                {{> burger-list devoured=true}}
+                {{> burger-list eaten=true}}
                 {{/if}}
                 {{/each}}
             </div>
