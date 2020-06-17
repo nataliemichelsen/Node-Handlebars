@@ -8,10 +8,10 @@ $(() => {
     name:
     });
     // ajax call
-    $.ajax
-
-    type: "POST"
+    $.ajax("/api", {
+    type: "POST",
     data: body
+    });
 
     // page reload 
     location.reload();
@@ -25,9 +25,11 @@ $(() => {
     id:
     });
     // ajax call
-    $.ajax
-    type: "PUT"
+    $.ajax("/api", {
+    type: "PUT",
     data: body
+    });
+
 
     // page reload 
     location.reload();
@@ -40,9 +42,11 @@ $(() => {
     id:
     });
     // ajax call
-    $.ajax
-    type: "DELETE"
+    $.ajax("/api", {
+    type: "DELETE",
     data: body
+    });
+
 
     // page reload 
     location.reload();
