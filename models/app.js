@@ -1,6 +1,5 @@
 // using jquery to SEND required requests (post, put, delete (no get))
 
-
 // post (form data)
 $(() => {
     // event listener for submit button (not click listener)
