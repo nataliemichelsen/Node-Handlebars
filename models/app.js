@@ -5,16 +5,16 @@
 $(() => {
     // event listener for submit button (not click listener)
     $("").submit((event) => {
-    name:
+        name:
     });
     // ajax call
     $.ajax("/api", {
-    type: "POST",
-    data: body
-    });
-
-    // page reload 
-    location.reload();
+        type: "POST",
+        data: body
+    }).then(() => {
+        // page reload 
+        location.reload();
+    })
 });
 
 
@@ -22,32 +22,30 @@ $(() => {
 $(() => {
     // on-click event listener
     $("").on("click", (event) => {
-    id:
+        id:
     });
     // ajax call
     $.ajax("/api", {
-    type: "PUT",
-    data: body
-    });
-
-
-    // page reload 
-    location.reload();
+        type: "PUT",
+        data: body
+    }).then(() => {
+        // page reload 
+        location.reload();
+    })
 });
 
 // delete (remove item)
 $(() => {
     // on-click event listener
     $("").on("click", (event) => {
-    id:
+        id:
     });
     // ajax call
     $.ajax("/api", {
-    type: "DELETE",
-    data: body
-    });
-
-
-    // page reload 
-    location.reload();
+        type: "DELETE",
+        data: body
+    }).then(() => {
+        // page reload 
+        location.reload();
+    })
 });
