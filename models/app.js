@@ -1,32 +1,44 @@
 // using jquery to SEND required requests (post, put, delete (no get))
 
 
-// post
+// post (form data)
 $(() => {
+    // event listener for submit button (not click listener)
+    $("").submit((event) => {
+
+    });
     name:
-    type:
-    data:
+    type: "POST"
+    data: body
     
     // page reload 
     location.reload();
 });
 
 
-// put
+// put (eat item)
 $(() => {
-    name:
-    type:
-    data:
+    // on-click event listener
+    $("").on("click", (event) => {
+
+    });
+    id:
+    type: "PUT"
+    data: body
     
     // page reload 
     location.reload();
 });
 
-// delete 
+// delete (remove item)
 $(() => {
-    name:
-    type:
-    data:
+    // on-click event listener
+    $("").on("click", (event) => {
+
+    });
+    id:
+    type: "DELETE"
+    data: body
     
     // page reload 
     location.reload();
