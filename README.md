@@ -189,7 +189,7 @@ This application is somewhat useful, but is mostly a fun game or activity.
 
 ## **Licence**
 
-There is currently no licence for this app. 
+MIT License. See LICENSE file for more information.
 
 ## **Contributors**
 
@@ -204,3 +204,5 @@ Send me a message on GitHub, otherwise, feel free to clone or download.
 There are currently no tests for this app. 
 
 ## **Video of Deployed Application**
+
+![Deployed Application]()
