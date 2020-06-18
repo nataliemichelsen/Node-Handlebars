@@ -30,4 +30,5 @@ app.use(routes);
 
 // LISTEN for PORT & run function
 app.listen(PORT, function() {
+    console.log("app listening on port 8080")
 });

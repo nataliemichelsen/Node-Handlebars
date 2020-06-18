@@ -1,32 +1,53 @@
-// require orm.js to pull file data
-const orm = require("../config/orm.js");
+// using jquery to SEND required requests (post, put, delete (no get))
 
-// same functions as defined on orm.js
-// setting orm variables (select, insert, update, delete)
-// taking orm functions & adding callback paramter to render id data
-const burger = {
+// post (form data)
+$(() => {
+    // event listener for submit button (not click listener)
+    $("").submit((event) => {
+        // submit button input
+        name: $("#input").val()
+    });
+    // ajax call
+    $.ajax("/api", {
+        type: "POST",
+        data: body
+    }).then(() => {
+        // page reload 
+        location.reload();
+    })
+});
 
-    // get
-    all: cb => {
-        orm.selectAll(res => cb(res));
-    },
 
-    // post
-    add: (name, cb) => {
-        orm.insertOne([name], res => cb(res));
-    },
+// put (eat item)
+$(() => {
+    // on-click event listener
+    $("").on("click", (event) => {
+        // targeting item data
+        id: $(event.target).data("id")
+    });
+    // ajax call
+    $.ajax("/api", {
+        type: "PUT",
+        data: body
+    }).then(() => {
+        // page reload 
+        location.reload();
+    })
+});
 
-    // put
-    update: (id, cb) => {
-        orm.updateOne([id], res => cb(res));    
-    },
-
-    // delete
-    delete: (id, cb) => {
-        orm.deleteOne([id], res => cb(res));
-    }
-
-};
-
-// exporting burger variable as defined above
-module.exports = burger;
+// delete (remove item)
+$(() => {
+    // on-click event listener
+    $("").on("click", (event) => {
+        // targeting item data
+        id: $(event.target).data("id")
+    });
+    // ajax call
+    $.ajax("/api", {
+        type: "DELETE",
+        data: body
+    }).then(() => {
+        // page reload 
+        location.reload();
+    })
+});
