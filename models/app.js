@@ -1,32 +1,29 @@
 // require orm.js to pull file data
-const orm = require("../config/orm.js");
+const orm = require("../config/orm");
 
-// same functions as defined on orm.js
+// same functions as defined on orm.js`
 // setting orm variables (select, insert, update, delete)
 // taking orm functions & adding callback paramter to render id data
-const burger = {
-
-    // get
-    all: cb => {
-        orm.selectAll(res => cb(res));
+var burger = {
+    all: function(cb) {
+      orm.all("burgers", function(res) {
+        cb(res);
+      });
     },
-
-    // post
-    add: (name, cb) => {
-        orm.insertOne([name], res => cb(res));
+    create: function(name, cb) {
+      orm.create("burgers", [
+        "burger_name", "devoured"
+      ], [
+        name, false
+      ], cb);
     },
-
-    // put
-    update: (id, cb) => {
-        orm.updateOne([id], res => cb(res));    
-    },
-
-    // delete
-    delete: (id, cb) => {
-        orm.deleteOne([id], res => cb(res));
+    update: function(id, cb) {
+      var condition = "id=" + id;
+      orm.update("burgers", {
+        devoured: true
+      }, condition, cb);
     }
-
-};
+  };
 
 // exporting burger variable as defined above
 module.exports = burger;

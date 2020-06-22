@@ -7,8 +7,8 @@ const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "1234",
-    database: "burgers_db"
+    password: "password",
+    database: "burger_db"
 });
 
 // connection to JAWSDB on heroku
@@ -19,16 +19,26 @@ const connection = mysql.createConnection({
 //         port: 3306
 //             user: "root"
 //                 password: "1234"
-//                     database: "burgers_db"
+//                     database: "burger_db"
 // }
+
+// var del = connection._protocol._delegateError;
+// connection._protocol._delegateError = function(err, sequence){
+//   if (err.fatal) {
+//     console.trace('fatal error: ' + err.message);
+//   }
+//   return del.call(this, err, sequence);
+// };
 
 // connect to the mysql server and sql database
 // arrow function used for better functionality
-connection.connect((err) => {
+connection.connect(function(err) {
     if (err) {
-        return
+      console.error("error connecting: " + err.stack);
+      return;
     }
-});
+    console.log("connected as id " + connection.threadId);
+  });
 
 // setting module.exports connection
 module.exports = connection;
