@@ -2,6 +2,19 @@
 .background {
     background-color: brown;
 }
+/* text input */
+input:enabled, input:focus, input:active {
+    height: 40px;
+    width: 400px;
+    max-width: 100%;
+    font-size: 14px;
+    border-radius: 40px;
+    margin: 4%;
+    padding: 4%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border: solid 4px goldenrod;
+}
 /* titles */
 .title {
     font-size: 74px;
@@ -76,13 +89,13 @@
     border: solid 4px goldenrod;
 }
 /* eat button with hover effects */
-.devour {
+.eatMe {
     width: 200px;
     color: navy;
     background-color: pink;
     border: solid 4px deeppink;
 }
-.devour:hover {
+.eatMe:hover {
     font-weight: bold;
     color: pink;
     background-color: violet;
