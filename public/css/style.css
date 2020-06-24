@@ -1,3 +1,103 @@
-body {
-    
+/* body & backgrounds */
+.background {
+    background-color: brown;
+}
+/* titles */
+.title {
+    font-size: 74px;
+    text-align: center;font-family: 'Courier New', Courier, monospace;
+}
+.sub-title {
+    font-size: 44px;
+    text-align: center;font-family: 'Courier New', Courier, monospace;
+}
+/* eat / ate color code */
+.sub-title-eat {
+    color: green;
+}
+.sub-title-ate {
+    color: red;
+}
+.eat {
+    border: solid 2px green;
+}
+.ate {
+    border: solid 2px red;
+}
+/* image */
+.burgersImage {
+    max-width: 100%;
+    width: 200px;
+}
+/* lists */
+.item {
+    height: 64px;
+    border-radius: 44px;
+    width: 400px;
+    max-width: 100%;
+    background-color: brown;
+}
+.list1 {
+    color: deeppink;
+    font-size: 24px;
+    text-align: center;
+    padding: 4%;
+    margin: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.list2 {
+    color: violet;
+    font-size: 24px;
+    text-align: center;
+    padding: 4%;    
+    margin: 4px;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* submit button with hover effects */
+.button {
+    height: 60px;
+    border-radius: 40px;
+    max-width: 100%;
+    margin: 2.5%;
+    padding: 1%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+}
+.submit {
+
+    color: navy;
+    background-color: pink;
+    border: solid 4px deeppink;
+}
+.submit:hover {
+    font-weight: bold;
+    color: pink;
+    background-color: violet;
+    border: solid 4px goldenrod;
+}
+/* eat button with hover effects */
+.devour {
+    width: 200px;
+    color: navy;
+    background-color: pink;
+    border: solid 4px deeppink;
+}
+.devour:hover {
+    font-weight: bold;
+    color: pink;
+    background-color: violet;
+    border: solid 4px goldenrod;
+}
+/* delete button with hover effects */
+.delete {
+    width: 200px;
+    color: navy;
+    background-color: pink;
+    border: solid 4px deeppink;
+}
+.delete:hover {
+    font-weight: bold;
+    color: pink;
+    background-color: violet;
+    border: solid 4px goldenrod;
 }

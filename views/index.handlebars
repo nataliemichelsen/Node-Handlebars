@@ -1,13 +1,18 @@
 {{!-- page layouts --}}
+<html>
+
+<head>
+    <link rel="stylesheet" href="../public/css/style.css" type="text/css" />
+</head>
 <div class="container">
     <div class="row">
         <div class="col-sm-6 text-center mx-auto">
             {{!-- insert random photo here --}}
             <img class="burgersImage" src="../images/burgers.jpg" alt="yummy burgers" />
             <h1 class="title">Let's Eat!</h1>
-            <form id="form">
+            <form>
                 <input type="text" id="input" placeholder="What Burger Would You Like?" />
-                <button type="submit" id="submit" class="button submit">Eat!</button>
+                <button type="submit" class="button submit">Eat!</button>
             </form>
         </div>
     </div>
@@ -17,7 +22,7 @@
     <div class="row">
         <div class="col-sm-6">
             <h2 class="sub-title sub-title-eat mx-auto">Eat These Burgers!</h2>
-            <div>
+            <div class="list1">
                 {{!-- list of burgers that can be eaten --}}
                 {{#each burgers}}
                 {{#unless eaten}}
@@ -28,7 +33,7 @@
         </div>
         <div class="col-sm-6">
             <h2 class="sub-title sub-title-ate mx-auto">These Burgers Have Been Eaten!</h2>
-            <div>
+            <div class="list2">
                 {{!-- list of burgers that have been eaten --}}
                 {{#each burgers}}
                 {{#if eaten}}
@@ -39,3 +44,5 @@
         </div>
     </div>
 </div>
+
+</html>
