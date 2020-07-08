@@ -7,4 +7,4 @@ INSERT INTO burgers (burger_name, eaten) VALUES
 ("Tuna on Toast", FALSE), 
 ("Inside-Out Animal-Style", FALSE),
 ("Burnt AF Grilled Cheese", FALSE),
-("Spaghetti", TRUE);
+("Classic Cheeseburger", TRUE);

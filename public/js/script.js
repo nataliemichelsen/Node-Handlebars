@@ -1,12 +1,16 @@
 // using jquery to SEND required requests (post, put, delete (no get))
 
 // post (form data)
-$(() => {
     // event listener for submit button (not click listener)
-    $("").submit((event) => {
+    $("#form").submit((event) => {
         // submit button input
-        name: $("#input").val()
-    });
+        event.preventDefault();
+        var body = {
+        name: $("#input").val().trim()
+    };
+    if (body.name === "") {
+        return;
+    }
     // ajax call
     $.ajax("/api", {
         type: "POST",
@@ -17,11 +21,13 @@ $(() => {
     })
 });
 
-
 // put (eat item)
 $(() => {
     // on-click event listener
-    $("").on("click", (event) => {
+    $(".eat").on("click", (event) => {
+        var body = {
+            id: $(event.target).data("id")
+        };
         // targeting item data
         id: $(event.target).data("id")
     });
@@ -35,13 +41,14 @@ $(() => {
     })
 });
 
+
 // delete (remove item)
-$(() => {
     // on-click event listener
-    $("").on("click", (event) => {
+    $(".delete").on("click", (event) => {
         // targeting item data
-        id: $(event.target).data("id")
-    });
+        var body = {
+            id: $(event.target).data("id")
+        };
     // ajax call
     $.ajax("/api", {
         type: "DELETE",
