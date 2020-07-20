@@ -15,29 +15,24 @@ const burger = {
   // insert
   insertOne: function () {
     orm.insertOne(burgers, nameVal, function (res) {
-
+      cb(res);
     });
-  },
-
-  // create
-  createOne: function (name, cb) {
-
   },
 
   // update
   updateOne: function (id, cb) {
     let eaten = val.eaten;
     orm.updateOne(eaten, id, function (results) {
-
+      cb(results);
     });
   },
 
   // delete
   deleteOne: function () {
     orm.deleteOne(id, (confirm) => {
-
+      cb(confirm);
     });
-  }
+  },
 };
 
 // exporting burger variable as defined above
