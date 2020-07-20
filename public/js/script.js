@@ -1,8 +1,9 @@
 // page variables
-let script = $('');
-let error = $('');
-let input = $('');
+let script = $('.newBurgerScript');
+let error = $('.error');
+let input = $('.input', '.add');
 
+// error check
 $('.burgerInput').on('keydown', function () {
     if (!error.hasClass('hide')) {
         hideError();
@@ -12,7 +13,7 @@ $('.burgerInput').on('keydown', function () {
 // submitted burger
 $('newBurgerData').on('submit', function (event) {
     event.preventDefault();
-    let burger = $('.burgerInput').val().trim();
+    let burger = $('.input').val().trim();
 
     // new burger variable
     let newBurger = {
@@ -57,13 +58,3 @@ $('deleteButton').click(function () {
         location.reload();
     });
 })
-
-// display error
-function displayError() {
-
-}
-
-// hide error
-function hideError() {
-
-}
