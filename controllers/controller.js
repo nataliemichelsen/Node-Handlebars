@@ -18,23 +18,6 @@ router.get("/burgers", function (req, res) {
   });
 });
 
-// put (update)
-router.put("/burgers/:id", function (req, res) {
-  // setting params for new variable
-  let x = req.params.id;
-  burger.updateOne(
-    // set UpdateOne status
-    {
-      eaten: true
-    },
-    // calling data in new function for variable x
-    x, function (data) {
-      // return status
-      res.sendStatus(200);
-    }
-  );
-});
-
 // post (add)
 router.post("/burgers/create", function (req, res) {
   // calling string data from table
@@ -50,6 +33,23 @@ router.post("/burgers/create", function (req, res) {
       // return status
       res.sendStatus(200);
     });
+});
+
+// put (update)
+router.put("/burgers/:id", function (req, res) {
+  // setting params for new variable
+  let x = req.params.id;
+  burger.updateOne(
+    // set UpdateOne status
+    {
+      eaten: true
+    },
+    // calling data in new function for variable x
+    x, function (data) {
+      // return status
+      res.sendStatus(200);
+    }
+  );
 });
 
 // delete (delete selected)

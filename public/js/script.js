@@ -3,10 +3,24 @@ let script = $('');
 let error = $('');
 let input = $('');
 
-// submitted burger
 $('.burgerInput').on('keydown', function() {
-    if (!error)
-    hideError();
+    if (!error.hasClass('hide')) {
+        hideError();
+    }
+});
+
+// submitted burger
+$('newBurger').on('submit', function(event) {
+    event.preventDefault();
+    let burger = $('.burgerInput').val().trim();
+    if
+    then
+    $.ajax('/burger', {
+        method: 'POST',
+        data:
+    }).then(function(data) {
+
+    });
 });
 
 // eaten button
@@ -17,7 +31,12 @@ $('.eatenBtn').click(function() {
         eaten: true
     }
     // ajax call for table data
-    $.ajax
+    $.ajax('/burgers/${id}', {
+        method: 'PUT',
+        data:
+    }).then(function(data) {
+
+    });
 });
 
 // display error
