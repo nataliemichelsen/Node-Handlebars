@@ -3,41 +3,60 @@ let script = $('');
 let error = $('');
 let input = $('');
 
-$('.burgerInput').on('keydown', function() {
+$('.burgerInput').on('keydown', function () {
     if (!error.hasClass('hide')) {
         hideError();
     }
 });
 
 // submitted burger
-$('newBurger').on('submit', function(event) {
+$('newBurgerData').on('submit', function (event) {
     event.preventDefault();
     let burger = $('.burgerInput').val().trim();
-    if
-    then
+
+    // new burger variable
+    let newBurger = {
+        burger_name: burger
+    }
+    // ajax call for table data - POST
     $.ajax('/burger', {
         method: 'POST',
-        data:
-    }).then(function(data) {
-
+        data: newBurger
+        // then for function reload
+    }).then(function (data) {
+        location.reload();
     });
 });
 
 // eaten button
-$('.eatenBtn').click(function() {
-    // variables for data
+$('.eatenBtn').click(function () {
+    // defining new variable for eaten button with put data
     let id = $(this).data('id');
     let eaten = {
         eaten: true
     }
-    // ajax call for table data
+    // ajax call for table data - PUT
     $.ajax('/burgers/${id}', {
         method: 'PUT',
-        data:
-    }).then(function(data) {
-
+        data: eaten
+        // then for function reload
+    }).then(function (data) {
+        location.reload();
     });
 });
+
+// delete button 
+$('deleteButton').click(function () {
+    // defining new variable for delete button data
+    let id = $(this).data('id');
+    // ajax call for table data - DELETE
+    $.ajax('/burgers/${id}', {
+        method: 'DELETE',
+        // then for function reload
+    }).then(function (data) {
+        location.reload();
+    });
+})
 
 // display error
 function displayError() {
@@ -46,5 +65,5 @@ function displayError() {
 
 // hide error
 function hideError() {
-    
+
 }
