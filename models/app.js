@@ -4,24 +4,39 @@ const orm = require("../config/orm");
 // same functions as defined on orm.js`
 // setting orm variables (select, insert, update, delete)
 // taking orm functions & adding callback paramter to render id data
-var burger = {
-    all: function(cb) {
-      orm.all("burgers", function(res) {
+const burger = {
+  // select
+    selectAll: function(cb) {
+      orm.selectAll(data => {
         cb(res);
       });
     },
-    create: function(name, cb) {
+
+  // insert
+    insertOne: function() {
+
+    },
+  
+  // create
+    createOne: function(name, cb) {
       orm.create("burgers", [
         "burger_name", "devoured"
       ], [
         name, false
       ], cb);
     },
-    update: function(id, cb) {
+
+  // update
+    updateOne: function(id, cb) {
       var condition = "id=" + id;
       orm.update("burgers", {
         devoured: true
       }, condition, cb);
+    },
+
+  // delete
+    deleteOne: function() {
+      
     }
   };
 
