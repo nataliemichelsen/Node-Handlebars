@@ -3,9 +3,9 @@ const connection = require("./connection");
 
 // 
 const orm = {
-  all: function(tableInput, cb) {
+  all: function (tableInput, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
@@ -13,20 +13,41 @@ const orm = {
     });
   },
 
-// insert
-insertOne: function() {
-  let querySearch
-}
+  // insert
+  insertOne: function () {
+    let querySearch = "INSERT INTO burgers"
+    connection.query(
+      querySearch,
+      function(err, data) {
+        if (err) throw err;
+        cb(data)
+      }
+    )
+  },
 
 // update
-updateOne: function() {
-
-}
+updateOne: function () {
+    let querySearch = "UPDATE burgers"
+    connection.query(
+      querySearch,
+      function(err, data) {
+        if (err) throw err;
+        cb(data)
+      }
+    )
+  },
 
 // delete
-deleteOne: function() {
-
-}
+deleteOne: function () {
+    let querySearch = "DELETE FROM burgers"
+    connection.query(
+      querySearch,
+      function(err, data) {
+        if (err) throw err;
+        cb(data)
+      }
+    )
+  },
 
 // exporting orm variable as defined above
 module.exports = orm;
