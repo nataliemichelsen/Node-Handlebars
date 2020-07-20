@@ -8,10 +8,10 @@
     <div class="row">
         <div class="col-sm-6 text-center mx-auto">
             {{!-- insert random photo here --}}
-            <img class="burgersImage" src="/images/burgers.jpg" alt="yummy burgers"/>
+            <img class="burgersImage" src="/images/burgers.jpg" alt="yummy burgers" />
             <h1 class="title">Let's Eat!</h1>
             <form>
-                <input type="text" id="input" placeholder="What Burger Would You Like?"/>
+                <input type="text" id="input" placeholder="What Burger Would You Like?" />
                 <button type="submit" class="button submit">Eat!</button>
             </form>
         </div>
@@ -26,18 +26,28 @@
                 {{!-- list of burgers that can be eaten --}}
                 {{#each burgers}}
                 {{#unless eaten}}
-                {{> burger eaten=false}}
+                <li>
+                    <button class="eat btn btn-dark" data-id="{{id}}" type="button">
+                        {{ burger_name }}
+                    </button>
+                </li>
                 {{/unless}}
                 {{/each}}
             </div>
         </div>
         <div class="col-sm-6">
-            <h2 class="sub-title sub-title-ate mx-auto">These Burgers Have Been Eaten!</h2>
+            <h2 class="ate sub-title-ate mx-auto">These Burgers Have Been Eaten!</h2>
             <div class="list2">
                 {{!-- list of burgers that have been eaten --}}
                 {{#each burgers}}
                 {{#if eaten}}
-                {{> burger eaten=true}}
+                <li>
+                    {{burger_name}}
+
+                    <button data-id="{{id}}" class="delete">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </li>
                 {{/if}}
                 {{/each}}
             </div>
