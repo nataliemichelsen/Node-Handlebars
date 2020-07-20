@@ -1,60 +1,31 @@
-// using jquery to SEND required requests (post, put, delete (no get))
+// page variables
+let script = $('');
+let error = $('');
+let input = $('');
 
-// post (form data)
-    // event listener for submit button (not click listener)
-    $("#form").submit((event) => {
-        // submit button input
-        event.preventDefault();
-        var body = {
-        name: $("#input").val().trim()
-    };
-    if (body.name === "") {
-        return;
+// submitted burger
+$('.burgerInput').on('keydown', function() {
+    if (!error)
+    hideError();
+});
+
+// eaten button
+$('.eatenBtn').click(function() {
+    // variables for data
+    let id = $(this).data('id');
+    let eaten = {
+        eaten: true
     }
-    // ajax call
-    $.ajax("/api", {
-        type: "POST",
-        data: body
-    }).then(() => {
-        // page reload 
-        location.reload();
-    })
+    // ajax call for table data
+    $.ajax
 });
 
-// put (eat item)
-$(() => {
-    // on-click event listener
-    $(".eat").on("click", (event) => {
-        var body = {
-            id: $(event.target).data("id")
-        };
-        // targeting item data
-        id: $(event.target).data("id")
-    });
-    // ajax call
-    $.ajax("/api", {
-        type: "PUT",
-        data: body
-    }).then(() => {
-        // page reload 
-        location.reload();
-    })
-});
+// display error
+function displayError() {
 
+}
 
-// delete (remove item)
-    // on-click event listener
-    $(".delete").on("click", (event) => {
-        // targeting item data
-        var body = {
-            id: $(event.target).data("id")
-        };
-    // ajax call
-    $.ajax("/api", {
-        type: "DELETE",
-        data: body
-    }).then(() => {
-        // page reload 
-        location.reload();
-    })
-});
+// hide error
+function hideError() {
+    
+}
