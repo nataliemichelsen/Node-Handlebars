@@ -25,13 +25,13 @@
             <div class="list1">
                 {{!-- list of burgers that can be eaten --}}
                 {{#each burgers}}
-                {{#unless eaten}}
-                <li>
-                    <button class="eat btn btn-dark" data-id="{{id}}" type="button">
-                        {{ burger_name }}
-                    </button>
-                </li>
-                {{/unless}}
+                    {{#unless eaten}}
+                        <li>
+                            <button class="eat btn btn-dark" data-id="{{id}}" type="button">
+                                    {{ burger_name }}
+                            </button>
+                        </li>
+                    {{/unless}}
                 {{/each}}
             </div>
         </div>
@@ -40,15 +40,14 @@
             <div class="list2">
                 {{!-- list of burgers that have been eaten --}}
                 {{#each burgers}}
-                {{#if eaten}}
-                <li>
-                    {{burger_name}}
-
-                    <button data-id="{{id}}" class="delete">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </li>
-                {{/if}}
+                    {{#if eaten}}
+                        <li>
+                            {{burger_name}}
+                                <button data-id="{{id}}" class="delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                        </li>
+                    {{/if}}
                 {{/each}}
             </div>
         </div>

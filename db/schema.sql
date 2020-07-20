@@ -1,8 +1,10 @@
 -- // remove if existing
 DROP DATABASE IF EXISTS burger_db;
 
--- // create & use database 
+-- // create & use db
 CREATE DATABASE burger_db;
+
+-- // use db
 USE burger_db;
 
 -- // define table
