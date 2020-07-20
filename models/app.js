@@ -6,39 +6,39 @@ const orm = require("../config/orm");
 // taking orm functions & adding callback paramter to render id data
 const burger = {
   // select
-    selectAll: function(cb) {
-      orm.selectAll(data => {
-        cb(res);
-      });
-    },
+  selectAll: function (cb) {
+    orm.selectAll(data => {
+      cb(res);
+    });
+  },
 
   // insert
-    insertOne: function() {
+  insertOne: function () {
+    orm.insertOne(burgers, nameVal, function (res) {
 
-    },
-  
+    });
+  },
+
   // create
-    createOne: function(name, cb) {
-      orm.create("burgers", [
-        "burger_name", "devoured"
-      ], [
-        name, false
-      ], cb);
-    },
+  createOne: function (name, cb) {
+
+  },
 
   // update
-    updateOne: function(id, cb) {
-      var condition = "id=" + id;
-      orm.update("burgers", {
-        devoured: true
-      }, condition, cb);
-    },
+  updateOne: function (id, cb) {
+    let eaten = val.eaten;
+    orm.updateOne(eaten, id, function (results) {
+
+    });
+  },
 
   // delete
-    deleteOne: function() {
-      
-    }
-  };
+  deleteOne: function () {
+    orm.deleteOne(id, (confirm) => {
+
+    });
+  }
+};
 
 // exporting burger variable as defined above
 module.exports = burger;
