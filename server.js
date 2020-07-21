@@ -3,7 +3,7 @@ const express = require("express");
 const expressHandlebars = require("express-handlebars");
 
 // PORT definition
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 // express middleware functionality >>>>
 let server = express();
@@ -28,5 +28,5 @@ server.use(routes);
 
 // LISTEN for PORT & run function
 server.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`)
+    console.log(`Server running on https://localhost:${PORT}`)
 });

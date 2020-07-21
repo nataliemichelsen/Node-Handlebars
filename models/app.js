@@ -13,14 +13,14 @@ const burger = {
   },
 
   // insert
-  insertOne: function () {
-    orm.insertOne(burgers, nameVal, function (res) {
+  insertOne: function (burgers, nameValue, cb) {
+    orm.insertOne(burgers, nameValue, function (res) {
       cb(res);
     });
   },
 
   // update
-  updateOne: function (id, cb) {
+  updateOne: function (val, id, cb) {
     let eaten = val.eaten;
     orm.updateOne(eaten, id, function (results) {
       cb(results);
@@ -28,7 +28,7 @@ const burger = {
   },
 
   // delete
-  deleteOne: function () {
+  deleteOne: function (id, cb) {
     orm.deleteOne(id, (confirm) => {
       cb(confirm);
     });

@@ -13,9 +13,12 @@ $('.burgerInput').on('keydown', function () {
 // submitted burger
 $('newBurgerData').on('submit', function (event) {
     event.preventDefault();
+    // defining new variable for submit button with post data
     let burger = $('.input').val().trim();
-
-    // new burger variable
+    // validate
+    if (burger === '') {
+        let index = Math.floor(Math.random() * errorArr.length);
+    }
     let newBurger = {
         burger_name: burger
     }

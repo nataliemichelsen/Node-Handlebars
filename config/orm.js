@@ -7,7 +7,7 @@ const orm = {
     let queryString = "SELECT * FROM burgers";
     connection.query(
       querySearch,
-      function(err, data) {
+      function (err, data) {
         if (err) throw err;
         cb(data);
       }
@@ -15,36 +15,36 @@ const orm = {
   },
 
   // insert
-  insertOne: function () {
+  insertOne: function (col, val, cb) {
     let querySearch = `INSERT INTO burgers (${col}) VALUES (?)`;
     connection.query(
       querySearch,
       val,
-      function(err, data) {
+      function (err, data) {
         if (err) throw err;
         cb(data);
       }
     );
   },
 
-// update
-updateOne: function () {
+  // update
+  updateOne: function (val, id, cb) {
     let querySearch = `UPDATE burgers SET devoured=${val} WHERE id = ${id}`;
     connection.query(
       querySearch,
-      function(err, data) {
+      function (err, data) {
         if (err) throw err;
         cb(data);
       }
     );
   },
 
-// delete
-deleteOne: function () {
+  // delete
+  deleteOne: function (id, cb) {
     let querySearch = `DELETE FROM burgers WHERE id=${id}`;
     connection.query(
       querySearch,
-      function(err, data) {
+      function (err, data) {
         if (err) throw err;
         cb(data);
       }
